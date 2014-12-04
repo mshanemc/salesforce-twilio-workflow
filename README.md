@@ -1,5 +1,6 @@
 salesforce-twilio-worklow
 =========================
+Explanation [blog here](https://shane-force.herokuapp.com/2014/12/04/sms-text-from-salesforce-workflow/) showing what this is for
 
 Everything from the [twilio-salesforce repo](https://github.com/twilio/twilio-salesforce), but added the following:
 
