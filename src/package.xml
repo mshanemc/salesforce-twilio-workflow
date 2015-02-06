@@ -17,17 +17,17 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
-		<members>Twilio_Message__c</members>
 		<members>TwilioConfig__c</members>
+		<members>Twilio_Message__c</members>
 		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>StaticResource</name>
 	</types>
 	<types>
 		<members>Twilio</members>
 		<name>RemoteSiteSetting</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
 	</types>
 	<version>31.0</version>
 </Package>
