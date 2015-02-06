@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionOverrides>
         <actionName>Accept</actionName>
         <type>Default</type>
@@ -72,6 +72,16 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Error_comments__c</fullName>
+        <description>if there&apos;s an error, here are the details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>if there&apos;s an error, here are the details</inlineHelpText>
+        <label>Error comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Message_Body__c</fullName>
         <externalId>false</externalId>
         <label>Message Body</label>
@@ -90,12 +100,24 @@
         <type>Phone</type>
     </fields>
     <fields>
-        <fullName>Sender_Phone__c</fullName>
+        <fullName>Status__c</fullName>
+        <description>did your message make it to Twilio?</description>
         <externalId>false</externalId>
-        <label>Sender Phone</label>
-        <required>false</required>
+        <inlineHelpText>did your message make it to Twilio?</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <trackTrending>false</trackTrending>
-        <type>Phone</type>
+        <type>Picklist</type>
     </fields>
     <label>Twilio Message</label>
     <listViews>
@@ -109,6 +131,11 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Twilio Messages</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Direction__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Recipient_Phone__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields xsi:nil="true"/>
+        <customTabListAdditionalFields>Message_Body__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

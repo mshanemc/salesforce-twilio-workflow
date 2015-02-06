@@ -5,6 +5,30 @@
     <description>Twilio App Config</description>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>API_Endpoint__c</fullName>
+        <description>base endpoint for  the twilio API.  For example, https://api.twilio.com</description>
+        <externalId>false</externalId>
+        <inlineHelpText>base endpoint for  the twilio API.  For example, https://api.twilio.com</inlineHelpText>
+        <label>API Endpoint</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>API_Version__c</fullName>
+        <description>API version--used to build the endpoint.  they look like dates lately.  For example, &apos;2010-04-01&apos; is a version.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>API version--used to build the endpoint.  they look like dates lately.  For example, &apos;2010-04-01&apos; is a version.</inlineHelpText>
+        <label>API Version</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>AccountSid__c</fullName>
         <externalId>false</externalId>
         <label>AccountSid</label>
@@ -29,6 +53,29 @@
         <externalId>false</externalId>
         <label>AuthToken</label>
         <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Twilio_Number__c</fullName>
+        <description>the phone number assigned by Twilio for your use</description>
+        <externalId>false</externalId>
+        <inlineHelpText>the phone number assigned by Twilio for your use</inlineHelpText>
+        <label>Twilio Number</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Twilio_Version__c</fullName>
+        <defaultValue>&quot;3.2.0&quot;</defaultValue>
+        <description>major version, like 3.2.0</description>
+        <externalId>false</externalId>
+        <inlineHelpText>major version, like 3.2.0</inlineHelpText>
+        <label>Twilio Version</label>
+        <length>255</length>
         <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
